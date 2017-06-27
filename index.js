@@ -1,5 +1,4 @@
 (function($) {
-    var map_url = 'https://intel.malwaretech.com/WannaCrypt.html';
     var wallet_api_url = 'https://blockchain.info/ru/q/addressbalance/';
     var ticker_api_url = 'https://blockchain.info/ru/ticker?cors=true';
     var wallets = [
@@ -48,7 +47,7 @@
 
             $('#btc-total').html(btc.toFixed(2));
 
-            var currency = values[3]['USD'];
+            var currency = values[1]['USD'];
             usd = btc * currency.buy;
             usd = currency.symbol + Math.round(usd).toLocaleString();
             $('#usd-total').html('(~' + usd + ')');
